@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C38D4B6F24D2B04F00874E0D /* tty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C38D4B6D24D2B04F00874E0D /* tty.cpp */; };
 		C3AD09D424D0966900769A78 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3AD09D324D0966900769A78 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C38D4B6D24D2B04F00874E0D /* tty.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tty.cpp; sourceTree = "<group>"; };
+		C38D4B6E24D2B04F00874E0D /* tty.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tty.hpp; sourceTree = "<group>"; };
 		C3AD09D024D0966900769A78 /* rub */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rub; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AD09D324D0966900769A78 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				C3AD09D324D0966900769A78 /* main.cpp */,
+				C38D4B6D24D2B04F00874E0D /* tty.cpp */,
+				C38D4B6E24D2B04F00874E0D /* tty.hpp */,
 			);
 			path = rub;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3AD09D424D0966900769A78 /* main.cpp in Sources */,
+				C38D4B6F24D2B04F00874E0D /* tty.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +245,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-lncurses";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +255,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-lncurses";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
